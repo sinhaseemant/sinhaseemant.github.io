@@ -1,0 +1,19 @@
+{
+  "roles": "Experiences",
+  "educations": "Educations",
+  "skills": "Skills",
+  "hobbies": "Hobbies",
+  "currently": "Currently",
+  "aboutme": "About me",
+  "fewWords": "In a few words",
+  "head" : "My head",
+  "details": "Details",
+  "name": "Name: ",
+  "age": "Age: ",
+  "years": "years",
+  "localization": "Localization: ",
+  "extras": "Extras",
+  "contactme": "Contact me on ",
+  "onrs": "Also present on ",
+  "projectOnGitHub": "Find this project on "
+}

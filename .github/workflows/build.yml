@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.4.0
+
+      - name: Bump version 🔧
+        if: ${{ !github.base_ref }}
+        run: |
+          # Strip git ref prefix from version
+          VERSION=$(echo "$GITHUB_REF" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "$GITHUB_REF" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          echo "VERSION: $VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          npm --no-git-tag-version version "$VERSION"
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+        env:
+          CI: false
+          REACT_APP_GRAPHQL_URL: ${{ secrets.REACT_APP_GRAPHQL_URL }}
+          REACT_APP_UA_GOOGLE_PROPERTY: ${{ secrets.REACT_APP_UA_GOOGLE_PROPERTY }}
+          GENERATE_SOURCEMAP: false
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: build

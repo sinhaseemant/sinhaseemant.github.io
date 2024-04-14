@@ -1,0 +1,15 @@
+.textColor {
+	color: #C8CCD0;
+}
+
+.langColor {
+	color: #CACCCE;
+}
+
+.langColor:hover {
+	color: #fff;
+}
+
+.langActive {
+	color: #fff;
+}
