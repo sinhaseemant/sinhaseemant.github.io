@@ -5,7 +5,7 @@ import { Education } from "../../interfaces/Education.interface";
 import { Role } from "../../interfaces/Role.interface";
 import { Identity } from "../../interfaces/Identity.interface";
 import { Skill } from "../../interfaces/Skill.interface";
-import picture from "../../assets/pictures/beardglasses.jpg";
+import picture from "../../assets/pictures/beardglasses.jpg"; 
 
 export class Data implements Resume {
 
