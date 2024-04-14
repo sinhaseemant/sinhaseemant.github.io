@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/static/css/main.75abfdc2.css",
+    "main.js": "/static/js/main.3e26fbae.js",
+    "static/media/beardglasses.jpg": "/static/media/beardglasses.de8a46604157e9c6f2cb.jpg",
+    "static/media/default.jpg": "/static/media/default.de8a46604157e9c6f2cb.jpg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.75abfdc2.css",
+    "static/js/main.3e26fbae.js"
+  ]
+}
