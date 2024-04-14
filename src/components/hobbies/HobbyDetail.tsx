@@ -13,7 +13,7 @@ function HobbyDetail(props: Props) {
 		<Col md={6} xs={12} className="text-center">
 			<div className="border border-grey rounded mb-3 p-3">
 				<FontAwesomeIcon
-					icon={[hobby.icon.class, hobby.icon.name]}
+					icon={[hobby.icon.class, hobby.icon.name]} 
 					className="display-1"
 				/>
 				<div className="h5 my-2">{hobby.name}</div>
