@@ -2,13 +2,6 @@
 
 _This project is my resume as a Single Page website._
 
-<div style="text-align: center">
-    <p>
-        <a target="_blank" href="https://sinhaseemant.github.io">
-            <img src="./public/preview.png" alt="Preview" style="max-height:250px"/>
-        </a>
-    </p>
-</div>
 
 ## Global information
 
